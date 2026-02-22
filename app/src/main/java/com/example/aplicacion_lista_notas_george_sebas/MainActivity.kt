@@ -43,28 +43,6 @@ fun NoteScreen(viewModel: NoteViewModel) {
     var text by remember { mutableStateOf("") }
     val context = LocalContext.current
 
-    Column(modifier = Modifier.padding(16.dp)) {
-        Text(
-            text = stringResource(id = R.string.notes_list_title),
-            style = MaterialTheme.typography.headlineMedium
-        )
-        Spacer(modifier = Modifier.height(16.dp))
-        OutlinedTextField(
-            value = text,
-            onValueChange = { text = it },
-            label = { Text(stringResource(id = R.string.note_hint)) },
-            modifier = Modifier.fillMaxWidth()
-        )
-        Spacer(modifier = Modifier.height(16.dp))
-        Button(onClick = {
-            if (text.isNotBlank()) {
-                viewModel.addNote(text)
-                text = ""
-            } else {
-            }
-        }) {
-            Text(text = stringResource(id = R.string.add_note))
-        }
-    }
+
 //
 }
