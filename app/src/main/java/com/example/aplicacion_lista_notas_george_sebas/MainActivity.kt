@@ -66,5 +66,5 @@ fun NoteScreen(viewModel: NoteViewModel) {
             Text(text = stringResource(id = R.string.add_note))
         }
     }
-
+//
 }
