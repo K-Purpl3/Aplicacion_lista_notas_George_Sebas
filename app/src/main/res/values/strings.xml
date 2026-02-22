@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Aplicacion_lista_notas_George_Sebas</string>
+    <string name="app_name">Gestor de Notas Cortas</string>
+    <string name="add_note">Añadir Nota</string>
+    <string name="note_hint">Escribe tu nota aquí...</string>
+    <string name="notes_list_title">Tus Notas</string>
+    <string name="empty_note_error">La nota no puede estar vacía</string>
 </resources>
