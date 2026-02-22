@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -37,9 +38,6 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-
-
-
 @Composable
 fun NoteScreen(viewModel: NoteViewModel) {
     var text by remember { mutableStateOf("") }
@@ -57,6 +55,16 @@ fun NoteScreen(viewModel: NoteViewModel) {
             label = { Text(stringResource(id = R.string.note_hint)) },
             modifier = Modifier.fillMaxWidth()
         )
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(onClick = {
+            if (text.isNotBlank()) {
+                viewModel.addNote(text)
+                text = ""
+            } else {
+            }
+        }) {
+            Text(text = stringResource(id = R.string.add_note))
+        }
     }
 
 }
