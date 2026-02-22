@@ -1,4 +1,4 @@
-package com.example.aplicacion_lista_notas_george_sebas.ui.theme
+package com.example.aplicacion_lista_notas_george_sebas.ui
 
 import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.ViewModel
